@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { Card } from "./Card";
 import projImg1 from "../assets/img/Johnathan_Headshot.jpg";
@@ -36,6 +36,11 @@ export const HomePageCards: React.FC = () => {
       link: "/projects", 
     },
   ];
+  const [bounce, setBounce] = useState(false);
+
+  const handleAnimationEnd = () => {
+    setBounce(true);
+  };
 
   return (
     <section className="project" id="projects">
@@ -43,9 +48,9 @@ export const HomePageCards: React.FC = () => {
         <Row>
           <TrackVisibility>
             {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""} onAnimationEnd={handleAnimationEnd}>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                  <Tab.Content id="slideInUp"  className={isVisible ? "continuousBounce" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
                         {projects.map((project, index) => (

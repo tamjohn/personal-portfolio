@@ -91,7 +91,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 25px;
+  font-size: 18px;
   opacity: 0.75;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -105,8 +105,6 @@ span.navbar-text {
 .social-icon {
     display: inline-block;
     margin-left: 14px;
-    position: absolute;
-    right: 25px;
 }
 .social-icon a {
     width: 42px;
@@ -220,22 +218,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
-.navbar-brand-text {
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-  position: absolute;
-  left: 25px;
-}
 
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  /* background-image: url('./assets/img/banner-bg.png'); */
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 200px;
 }
 .banner .tagline {
   font-weight: 700;
@@ -282,6 +273,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
+  filter: none !important; 
+  background-color: transparent !important; 
 }
 @keyframes updown {
     0% {
@@ -298,42 +291,86 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/************ Skills Css ************/
-.skill {
-  padding: 0 0 50px 0;
+/* Projects Section */
+.project {
+  padding: 80px 0;
   position: relative;
+  padding-top: 1px;
 }
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
+
+.project h2 {
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  color: #fff;
 }
-.skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 14px auto 30px auto;
+  width: 56%;
 }
-.skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
-}
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
+
+/* Project Cards */
+.proj-imgbx {
   position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  transition: 0.4s ease-in-out;
 }
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+
+.proj-imgbx img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease-in-out;
 }
-.background-image-left {
-  top: 28%;
+
+.proj-imgbx:hover::before {
+  opacity: 0.85;
+  height: 100%;
+}
+
+.proj-txtx {
   position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+
+.proj-imgbx:hover .proj-txtx {
+  opacity: 1;
+}
+
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.8px;
+}
+
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 0.8px;
+}
+
+/* Hover Effects */
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: height 0.4s ease-in-out;
 }

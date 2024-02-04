@@ -31,27 +31,32 @@ export const NavBar: React.FC = () => {
   
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container>
-          <div>
-            
-          </div>
-          <Nav className="ms-auto d-flex align-items-center">
-            <Navbar.Brand href="/" className="navbar-brand-text">
-              Johnathan Tam
-            </Navbar.Brand>
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+      <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Container fluid className="justify-content-start justify-content-lg-between">
+          <Navbar.Brand href="/" className="ms-4" style={{ color: '#fff', fontSize: '25px', letterSpacing: '0.8px', fontWeight: '400' }}>
+            Johnathan Tam
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+            <Nav>
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+              <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
+              <Nav.Link href="#work" className={activeLink === 'work' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('work')}>Work</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+          <span className="navbar-text d-none d-lg-flex">
             <div className="social-icon">
               <a href="#"><img src={navIcon1} alt="" /></a>
               <a href="#"><img src={navIcon2} alt="" /></a>
               <a href="#"><img src={navIcon3} alt="" /></a>
             </div>
-          </Nav>
+            <HashLink to='#connect' className="me-4">
+              <button className="vvd"><span>Let’s Connect</span></button>
+            </HashLink>
+          </span>
         </Container>
       </Navbar>
     </Router>
   );
-  
 };

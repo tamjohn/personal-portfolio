@@ -5,11 +5,11 @@ import { HomePageCards } from "./components/HomePageCards";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Banner />
-      <HomePageCards />
-    </div>
+      <div className="App">
+        <NavBar />
+        <Banner />
+        <HomePageCards />
+      </div>
   );
 }
 

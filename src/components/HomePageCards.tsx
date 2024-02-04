@@ -6,11 +6,13 @@ import projImg2 from "../assets/img/Resume.png";
 import projImg3 from "../assets/img/Project.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { Link } from 'react-router-dom';
 
 type Project = {
   title: string;
   description: string;
   imgUrl: string;
+  link: string;
 };
 
 export const HomePageCards: React.FC = () => {
@@ -19,16 +21,19 @@ export const HomePageCards: React.FC = () => {
       title: "About Me",
       description: "Learn more about Johnathan!",
       imgUrl: projImg1,
+      link: "/about", 
     },
     {
       title: "Work Experience",
       description: "Read about my professional journey",
       imgUrl: projImg2,
+      link: "/work-experience", 
     },
     {
       title: "Projects",
       description: "See my personal projects",
       imgUrl: projImg3,
+      link: "/projects", 
     },
   ];
 
@@ -36,34 +41,28 @@ export const HomePageCards: React.FC = () => {
     <section className="project" id="projects">
       <Container>
         <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
+          <TrackVisibility>
+            {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <Card
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
+                        {projects.map((project, index) => (
+                          <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                            <Link to={project.link} style={{ textDecoration: 'none' }}>
+                              <Card {...project} />
+                            </Link>
+                          </Col>
+                        ))}
                       </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
               </div>}
-            </TrackVisibility>
-          </Col>
+          </TrackVisibility>
         </Row>
       </Container>
-      {/* <img className="background-image-right" src={colorSharp2}></img> */}
     </section>
-  )
+  );
 };

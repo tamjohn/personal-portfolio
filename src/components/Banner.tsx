@@ -23,7 +23,7 @@ const Banner: React.FC = () => {
   const typingSpeed = 150; 
   const deletionSpeed = 100; 
   const [index, setIndex] = useState<number>(1);
-  const toRotate: string[] = [ "Hello! I'm Johnathan.", "I am a Software Developer." ];
+  const toRotate: string[] = [ "Hello! I'm Johnathan.", "I am a Software Developer.", "Click on the tiles below to learn more about me." ];
   const period: number = 2000;
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const Banner: React.FC = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{``}
-                  <span className="txt-rotate" data-period="100" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <span className="txt-rotate" data-period="100"><span className="wrap">{text}</span></span></h1>
                 </div>
               )}
             </TrackVisibility>

@@ -322,6 +322,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   margin-bottom: 24px;
   transition: 0.4s ease-in-out;
+  min-width: 400px; /* Example minimum width */
+  margin: 50px;
 }
 
 .proj-imgbx img {

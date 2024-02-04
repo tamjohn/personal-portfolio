@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon2 from "../assets/img/nav-icon2.png";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 
@@ -44,8 +44,8 @@ export const NavBar: React.FC = () => {
           </Navbar.Collapse>
           <span className="navbar-text d-none d-lg-flex">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="" /></a>
-              <a href="#"><img src={navIcon2} alt="" /></a>
+              <a href="https://www.linkedin.com/in/johnathan-tam/"><img src={navIcon1} alt="" /></a>
+              <a href="https://github.com/tamjohn"><img src={navIcon2} alt="" /></a>
               <a href="#"><img src={navIcon3} alt="" /></a>
             </div>
             <HashLink to='#connect' className="me-4">

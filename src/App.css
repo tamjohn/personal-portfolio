@@ -16,6 +16,16 @@ html {
   margin: 0 auto;
 }
 
+.sectionContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 body {
   font-weight: 400;
   overflow-x: hidden;
@@ -23,12 +33,6 @@ body {
   background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
 }
 
 p, a, li, button, ul {
@@ -40,11 +44,6 @@ p, a, li, button, ul {
 
 a:hover {
   text-decoration: none;
-}
-
-img {
-  width: 100%;
-  height: auto;
 }
 
 button {
@@ -227,6 +226,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 200px;
+  overflow: hidden;
 }
 .banner .tagline {
   font-weight: 700;
@@ -292,6 +292,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* Projects Section */
+.homePageCardsContainer {
+  max-height: 100vh; 
+  overflow: hidden; 
+}
+
 .cards {
   padding: 80px 0;
   position: relative;
@@ -389,4 +394,126 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .continuousBounce {
   animation: slowBounce 2s infinite;
+}
+
+/* About Me Section */
+.aboutMeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 0;
+  background-color: white;
+  width: 100%;
+  height: 100vh; 
+}
+
+.aboutMeContent {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 4rem; 
+  width: 90%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  height: auto; 
+}
+
+.aboutMeImage {
+  flex: 1; 
+  width: 90%; 
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMeImage img {
+  display: block; 
+  width: 90%;
+  height: auto;
+  margin: 0; 
+}
+
+.text {
+  flex: 1;  
+  width: 50%;
+  padding: 0.05px;
+  height: auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+}
+
+.text h1 {
+  color: black;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 5px;
+}
+
+.text p {
+  width: 100%; 
+  text-align: left; 
+  margin: 0.5rem; 
+  font-size: 1em; 
+  color: #333; 
+  line-height: 1.6; 
+}
+
+.text p span {
+  font-size: 1.5em; 
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMeContent {
+    flex-direction: column;
+    width: 90%; 
+  }
+
+  .aboutMeImage, .text {
+    width: 100%; 
+    height: 100%;
+    margin: 0 auto; 
+    flex: none; 
+  }
+
+  .text h1 {
+    font-size: 2em; 
+    margin-top: 0;
+    padding-top: 0; 
+  }
+
+  .text p {
+    text-align: center; 
+  }
+}
+
+.publications {
+  text-align: left; /* Aligns text to the left */
+  padding-left: 7px; /* Adds some padding for better readability */
+  margin-top: 4px; /* Adds space above the publications list */
+}
+
+.publications ul {
+  list-style-type: disc; /* Uses disc for list item markers */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+.publications li {
+  margin-bottom: 10px; /* Adds space between list items */
+}
+
+.publications a {
+  color: grey; /* Sets the link color, choose your preferred color */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.publications a:hover {
+  text-decoration: underline; /* Adds underline on hover for better usability */
 }

@@ -21,19 +21,19 @@ export const HomePageCards: React.FC = () => {
       title: "About Me",
       description: "Learn more about Johnathan!",
       imgUrl: headshot,
-      link: "/about", 
+      link: "/#about", 
     },
     {
       title: "Work Experience",
       description: "Read about my professional journey",
       imgUrl: resume,
-      link: "/work-experience", 
+      link: "/#work-experience", 
     },
     {
       title: "Projects",
       description: "See my personal projects",
       imgUrl: projectPic,
-      link: "/projects", 
+      link: "/#projects", 
     },
   ];
   const [bounce, setBounce] = useState(false);
@@ -43,8 +43,8 @@ export const HomePageCards: React.FC = () => {
   };
 
   return (
-    <section className="cards">
-      <Container>
+    <section className="cards" id='home'>
+      <Container className='homePageCardsContainer'>
         <Row>
           <TrackVisibility>
             {({ isVisible }) =>

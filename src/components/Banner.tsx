@@ -23,7 +23,7 @@ const Banner: React.FC = () => {
   const typingSpeed = 150; 
   const deletionSpeed = 100; 
   const [index, setIndex] = useState<number>(1);
-  const toRotate: string[] = [ "Hello! I'm Johnathan.", "I am a Software Developer.", "Click on the tiles below to learn more about me." ];
+  const toRotate: string[] = [ "Hello! I'm Johnathan.", "I am a Software Developer."];
   const period: number = 2000;
 
   useEffect(() => {

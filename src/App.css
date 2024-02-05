@@ -393,7 +393,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .continuousBounce {
-  animation: slowBounce 2s infinite;
+  animation: slowBounce 2.5s infinite;
 }
 
 /* About Me Section */

@@ -494,26 +494,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .publications {
-  text-align: left; /* Aligns text to the left */
-  padding-left: 7px; /* Adds some padding for better readability */
-  margin-top: 4px; /* Adds space above the publications list */
+  text-align: left; 
+  padding-left: 7px; 
+  margin-top: 4px; 
 }
 
 .publications ul {
-  list-style-type: disc; /* Uses disc for list item markers */
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
+  list-style-type: disc; 
+  margin: 0; 
+  padding: 0; 
 }
 
 .publications li {
-  margin-bottom: 10px; /* Adds space between list items */
+  margin-bottom: 10px; 
 }
 
 .publications a {
-  color: grey; /* Sets the link color, choose your preferred color */
-  text-decoration: none; /* Removes underline from links */
+  color: grey; 
+  text-decoration: none; 
 }
 
 .publications a:hover {
-  text-decoration: underline; /* Adds underline on hover for better usability */
+  text-decoration: underline; 
 }

@@ -517,3 +517,62 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .publications a:hover {
   text-decoration: underline; 
 }
+
+/* Work Experience Page */
+.workExpPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 0;
+  background-color: white;
+  width: 100%;
+  height: 100vh; 
+}
+
+.workCard {
+  border-color: #007bff; 
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 120px; /* Fixed height for consistency */
+  width: 100%; /* Full width of the card */
+  margin-top: 20px; /* Consistent top margin */
+  overflow: hidden; /* Prevents any overflow from the container */
+  background-color: white;
+}
+
+.workCardImg {
+  max-height: 100%; /* Limit image height to the container's height */
+  max-width: 100%; /* Limit image width to avoid touching the card's edges */
+  object-fit: scale-down; /* Ensures the whole image is visible, might not cover the entire area */
+  margin: 0 auto; /* Center the image */
+  background-color: white; /* Optional: Background color for empty space around the image */
+}
+
+.workExpHeader {
+  color: black; /* Set the color of the header */
+  text-align: center; /* Center align the header */
+  margin-bottom: 1rem; /* Add some space below the header */
+  font-size: 3rem; /* Increase the size of the header text */
+}
+
+.resumeLink {
+  color: grey; /* Set the color of the link */
+  text-align: center; /* Center align the link */
+  margin-bottom: 6rem; /* Add more space below the link */
+  display: block; /* Make it a block to center it easier */
+  font-size: 1.25rem; /* Increase the size of the link text */
+}
+
+.workExpHeader h2 {
+  font-size: 5rem;
+}

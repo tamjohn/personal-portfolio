@@ -26,6 +26,14 @@ html {
   overflow: hidden;
 }
 
+#home {
+  background-image: url('../src/assets/img/background.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
 body {
   font-weight: 400;
   overflow-x: hidden;
@@ -288,19 +296,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     }
 }
 .txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+  border-right: 0.08em solid white;
 }
 
-/* Projects Section */
-.homePageCardsContainer {
-  max-height: 100vh; 
-  overflow: hidden; 
-}
-
-.cards {
-  padding: 80px 0;
-  position: relative;
-  padding-top: 1px;
+/* Home Page Cards Section */
+@media screen and (max-width: 768px) {
+  .homePageCardsContainer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .cards {
+    padding: 50px 0; 
+  }
 }
 
 .project h2 {

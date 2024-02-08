@@ -23,7 +23,7 @@ export const WorkExp: React.FC = () => {
       datesWorked: "Sep 2023 - Jan 2024",
       techStack: ["AWS", "TypeScript", "Node.js", "DynamoDB", "S3", "Pipeline"],
       logoUrl: diligentLogo,
-      link: "/#company-one",
+      link: "https://www.diligent.com/",
     },
     {
         companyName: "Delta Controls",
@@ -31,7 +31,7 @@ export const WorkExp: React.FC = () => {
         datesWorked: "May 2023 - Aug 2023",
         techStack: ["Python", "Django", "PostgreSQL", "PHP", "Zend", "React"],
         logoUrl: deltaLogo,
-        link: "/#company-one",
+        link: "https://deltacontrols.com/",
     },
     {
         companyName: "Convergence Concepts",
@@ -39,7 +39,7 @@ export const WorkExp: React.FC = () => {
         datesWorked: "Sep 2022 - Dec 2022",
         techStack: ["React", "TypeScript", "Node.js", "GraphQL", "PostgreSQL", "Apollo"],
         logoUrl: convergenceLogo,
-        link: "/#company-one",
+        link: "https://cctech.io/",
     },
     {
         companyName: "Arthritis Research Canada",
@@ -47,7 +47,7 @@ export const WorkExp: React.FC = () => {
         datesWorked: "May 2017 - Sep 2022",
         techStack: ["Project Management", "Communication", "Problem-Solving"],
         logoUrl: arcLogo,
-        link: "/#company-one",
+        link: "https://www.arthritisresearch.ca/",
     },
   ];
 

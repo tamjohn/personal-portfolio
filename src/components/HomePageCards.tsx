@@ -7,6 +7,7 @@ import projectPic from "../assets/img/Project.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 type cardType = {
   title: string;
@@ -21,19 +22,19 @@ export const HomePageCards: React.FC = () => {
       title: "About Me",
       description: "Learn more about Johnathan!",
       imgUrl: headshot,
-      link: "/#about", 
+      link: "#about", 
     },
     {
       title: "Work Experience",
       description: "Read about my professional journey",
       imgUrl: resume,
-      link: "/#work-experience", 
+      link: "#work", 
     },
     {
       title: "Projects",
       description: "See my personal projects",
       imgUrl: projectPic,
-      link: "/#projects", 
+      link: "#projects", 
     },
   ];
   const [bounce, setBounce] = useState(false);
@@ -55,9 +56,10 @@ export const HomePageCards: React.FC = () => {
                       <Row>
                         {Cards.map((card, index) => (
                           <Col xs={12} sm={6} md={6} lg={4} key={index}>
-                            <Link to={card.link} style={{ textDecoration: 'none' }}>
+                            {/* Use HashLink here */}
+                            <HashLink to={card.link} style={{ textDecoration: 'none' }}>
                               <Card {...card} />
-                            </Link>
+                            </HashLink>
                           </Col>
                         ))}
                       </Row>

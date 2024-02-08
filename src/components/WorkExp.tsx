@@ -21,7 +21,7 @@ export const WorkExp: React.FC = () => {
       companyName: "Diligent Corporation",
       role: "Software Engineer Intern",
       datesWorked: "Sep 2023 - Jan 2024",
-      techStack: ["React", "TypeScript", "Node.js"],
+      techStack: ["AWS", "TypeScript", "Node.js", "DynamoDB", "S3", "Pipeline"],
       logoUrl: diligentLogo,
       link: "/#company-one",
     },
@@ -29,7 +29,7 @@ export const WorkExp: React.FC = () => {
         companyName: "Delta Controls",
         role: "Junior Software Developer Intern",
         datesWorked: "May 2023 - Aug 2023",
-        techStack: ["React", "TypeScript", "Node.js"],
+        techStack: ["Python", "Django", "PostgreSQL", "PHP", "Zend", "React"],
         logoUrl: deltaLogo,
         link: "/#company-one",
     },
@@ -37,7 +37,7 @@ export const WorkExp: React.FC = () => {
         companyName: "Convergence Concepts",
         role: "Full Stack Software Developer Intern",
         datesWorked: "Sep 2022 - Dec 2022",
-        techStack: ["React", "TypeScript", "Node.js"],
+        techStack: ["React", "TypeScript", "Node.js", "GraphQL", "PostgreSQL", "Apollo"],
         logoUrl: convergenceLogo,
         link: "/#company-one",
     },
@@ -45,7 +45,7 @@ export const WorkExp: React.FC = () => {
         companyName: "Arthritis Research Canada",
         role: "Research Coordinator",
         datesWorked: "May 2017 - Sep 2022",
-        techStack: ["React", "TypeScript", "Node.js"],
+        techStack: ["Project Management", "Communication", "Problem-Solving"],
         logoUrl: arcLogo,
         link: "/#company-one",
     },
@@ -61,7 +61,7 @@ export const WorkExp: React.FC = () => {
       </Row>
       <Row>
         <Col className="resumeLink">
-          <a href="URL_TO_YOUR_PDF" target="_blank" rel="noopener noreferrer">
+          <a href={`${process.env.PUBLIC_URL}/Johnathan_Resume_2024.pdf`} target="_blank" rel="noopener noreferrer">
             View My Resume
           </a>
         </Col>
@@ -80,8 +80,8 @@ export const WorkExp: React.FC = () => {
                     <Card.Text>
                       <small>{card.datesWorked}</small>
                     </Card.Text>
-                    <Card.Text>
-                      Tech Stack: {card.techStack.join(', ')}
+                    <Card.Text className='skillsText'>
+                      {card.techStack.join(', ')}
                     </Card.Text>
                   </Card.Body>
                 </Card>

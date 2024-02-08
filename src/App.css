@@ -576,3 +576,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .workExpHeader h2 {
   font-size: 5rem;
 }
+
+.skillsText {
+  font-size: 15px;
+}

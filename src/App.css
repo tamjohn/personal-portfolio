@@ -534,42 +534,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: #007bff; 
   border-width: 1px;
   border-style: solid;
+  border: 1px solid grey; 
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   background-color: white;
 }
 
 .imageContainer {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 120px; /* Fixed height for consistency */
-  width: 100%; /* Full width of the card */
-  margin-top: 20px; /* Consistent top margin */
-  overflow: hidden; /* Prevents any overflow from the container */
+  justify-content: center; 
+  align-items: center; 
+  height: 120px; 
+  width: 100%; 
+  margin-top: 20px; 
+  overflow: hidden; 
   background-color: white;
 }
 
 .workCardImg {
-  max-height: 100%; /* Limit image height to the container's height */
-  max-width: 100%; /* Limit image width to avoid touching the card's edges */
-  object-fit: scale-down; /* Ensures the whole image is visible, might not cover the entire area */
-  margin: 0 auto; /* Center the image */
-  background-color: white; /* Optional: Background color for empty space around the image */
+  max-height: 100%; 
+  max-width: 100%; 
+  object-fit: scale-down; 
+  margin: 0 auto; 
+  background-color: white; 
 }
 
 .workExpHeader {
-  color: black; /* Set the color of the header */
-  text-align: center; /* Center align the header */
-  margin-bottom: 1rem; /* Add some space below the header */
-  font-size: 3rem; /* Increase the size of the header text */
+  color: black; 
+  text-align: center; 
+  margin-bottom: 1rem; 
+  font-size: 3rem; 
 }
 
 .resumeLink {
-  color: grey; /* Set the color of the link */
-  text-align: center; /* Center align the link */
-  margin-bottom: 6rem; /* Add more space below the link */
-  display: block; /* Make it a block to center it easier */
-  font-size: 1.25rem; /* Increase the size of the link text */
+  color: grey; 
+  text-align: center; 
+  margin-bottom: 6rem; 
+  display: block; 
+  font-size: 1.25rem; 
 }
 
 .workExpHeader h2 {
@@ -578,4 +579,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .skillsText {
   font-size: 15px;
+}
+
+.resumeLink .resumeButton {
+  display: inline-block;
+  padding: 10px 20px; 
+  border:  1px solid grey; 
+  background-color: transparent; 
+  text-align: center;
+  text-decoration: none;
+  color: black; 
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+  border-radius: 20px; 
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.resumeLink .resumeButton:hover {
+  background-color: black; 
+  color: white; 
 }

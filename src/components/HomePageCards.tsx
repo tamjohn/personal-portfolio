@@ -56,7 +56,6 @@ export const HomePageCards: React.FC = () => {
                       <Row>
                         {Cards.map((card, index) => (
                           <Col xs={12} sm={6} md={6} lg={4} key={index}>
-                            {/* Use HashLink here */}
                             <HashLink to={card.link} style={{ textDecoration: 'none' }}>
                               <Card {...card} />
                             </HashLink>

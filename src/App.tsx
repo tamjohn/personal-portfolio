@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import { HomePageCards } from "./components/HomePageCards";
 import { AboutMePage } from "./components/AboutMe";
 import { WorkExp } from "./components/WorkExp";
+import { Projects } from "./components/Projects";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </section>
       <section id='work' className="sectionContainer">
         <WorkExp />
+      </section>
+      <section id='projects' className="sectionContainer">
+        <Projects />
       </section>
     </div>
   );

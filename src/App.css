@@ -600,3 +600,47 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: black; 
   color: white; 
 }
+
+/* Projects Page */
+.viewRepoButton {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #4b4b4b; 
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  color: #4b4b4b; 
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 20px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  margin-top: 1rem; 
+}
+
+.viewRepoButton:hover {
+  background-color: #4b4b4b; 
+  color: white;
+}
+
+.viewGithubButton {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid grey; 
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  color: #333; 
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 20px; 
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5rem;
+  font-size: 20px;
+}
+
+.viewGithubButton:hover {
+  background-color: #333; 
+  color: white;
+}

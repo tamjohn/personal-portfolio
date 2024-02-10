@@ -16,7 +16,7 @@ export const Projects: React.FC = () => {
     {
         title: "Hearo",
         date: "Feb 2022",
-        description: "Selected as a top 5 Finalist at SFU StormHacks (~400 participants) and winning an award for best use of API, Hearo solves the issues that arise from hearing aid failures by transcribing live speech into text on screen.",
+        description: "Selected as a top 5 Finalist at SFU StormHacks (~400 participants) and winning an award for best use of API, Hearo solves the issues that arise from hearing aid failures by transcribing live speech into text on their screen.",
         techStack: ["JavaScript, React", "Node", "Axios"],
         repoLink: "https://github.com/tamjohn/Hearo"
     }, 

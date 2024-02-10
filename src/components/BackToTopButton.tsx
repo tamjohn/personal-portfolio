@@ -1,23 +1,32 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
 export const BackToTopButton = () => {
-  let navigate = useNavigate();
-  let location = useLocation();
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handleBackToTop = () => {
-    navigate("/#home");
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
-  // Check if the current location is not the home page
-  if (location.pathname !== '/') {
-    return (
-      <button className="backToTopButton" onClick={handleBackToTop}>
-        ↑
-      </button>
-    );
-  } else {
-    // Return null if on the home page, hence not rendering the button
-    return null;
-  }
+  return isVisible ? (
+    <button onClick={scrollToTop} className="backToTopButton">
+      ↑ 
+    </button>
+  ) : null;
 };

@@ -5,8 +5,7 @@ import { HomePageCards } from "./components/HomePageCards";
 import { AboutMePage } from "./components/AboutMe";
 import { WorkExp } from "./components/WorkExp";
 import { Projects } from "./components/Projects";
-import { BrowserRouter as Router } from "react-router-dom";
-import { BackToTopButtonWrapper } from "./components/BackToTopButtonWrapper";
+import { BackToTopButton } from "./components/BackToTopButton"
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
         <section id='projects' className="sectionContainer">
           <Projects />
         </section>
-        <BackToTopButtonWrapper />
+        <BackToTopButton />
       </div>
   );
 }

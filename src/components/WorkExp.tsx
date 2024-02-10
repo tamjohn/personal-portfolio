@@ -35,7 +35,7 @@ export const WorkExp: React.FC = () => {
     },
     {
         companyName: "Convergence Concepts",
-        role: "Full Stack Software Developer Intern",
+        role: "Full Stack Developer Intern",
         datesWorked: "Sep 2022 - Dec 2022",
         techStack: ["React", "TypeScript", "Node.js", "GraphQL", "PostgreSQL", "Apollo"],
         logoUrl: convergenceLogo,

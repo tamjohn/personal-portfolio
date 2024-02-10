@@ -537,6 +537,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 1px solid grey; 
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will push the footer to the bottom */
+  height: 100%; /* Make sure the card takes up the full height */
 }
 
 .imageContainer {
@@ -558,6 +563,52 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: white; 
 }
 
+.workCard .card-title {
+  color: #333; /* Dark grey color for titles */
+  font-size: 1.25rem;
+  font-weight: bold; /* Bold for titles */
+  margin-top: 0.5rem; /* Space above title */
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.workCard .card-subtitle {
+  font-weight: bold;
+  color: black;
+}
+
+.workCard .card-text small {
+  display: block; /* Block to take up its own line */
+  color: #666; /* Lighter color for date */
+  margin-bottom: 0.5rem; /* Space below date */
+  display: block; /* Block display to take up the full width */
+  text-align: center; /* Center-align the date */
+  margin-bottom: 1rem; /* Space between date and description */
+}
+
+.workCard .card-text {
+  font-size: 0.9rem; /* Smaller font for description */
+  color: #444; /* Slightly darker text for description */
+  line-height: 1.4; /* Space between lines */
+  margin-bottom: 1rem; /* Space below description before tech stack */
+  text-align: left; /* Left-align the description */
+  margin-bottom: 1rem; /* Space between description and tech stack */
+}
+
+.workCard .techStack {
+  font-size: 0.85rem; /* Even smaller font for tech stack */
+  font-weight: bold; /* Bold for tech stack */
+  color: #333; /* Dark color for tech stack */
+  margin-bottom: 1rem; /* Space below tech stack before button */
+  font-weight: bold; /* Optional: Make the tech stack bold */
+  margin-bottom: 1.5rem; /* Space between tech stack and button */
+  text-align: center;
+}
+
+.workCard .card-body {
+  flex-grow: 1; /* This ensures that the card body takes up all available space */
+}
+
 .workExpHeader {
   color: black; 
   text-align: center; 
@@ -577,8 +628,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 5rem;
 }
 
-.skillsText {
+.workCard .skillsText {
   font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: grey;
 }
 
 .resumeLink .resumeButton {
@@ -592,7 +646,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s; 
-  border-radius: 20px; 
+  border-radius: 15px; 
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -615,7 +669,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: background-color 0.3s, color 0.3s;
   border-radius: 20px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-  margin-top: 1rem; 
+  margin: auto;
+  align-self: center;
 }
 
 .viewRepoButton:hover {
@@ -634,7 +689,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  border-radius: 20px; 
+  border-radius: 15px; 
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   margin-bottom: 5rem;
   font-size: 20px;
@@ -644,3 +699,52 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: #333; 
   color: white;
 }
+
+.projectCard {
+  border: 1px solid grey;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.projectCardImg {
+  max-height: 120px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.projectCard .card-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.projectCard .card-text {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.projectCard .techStack {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 6px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.projectCard:hover {
+  transform: translateY(-15px);
+  box-shadow: 6px 20px 20px rgba(0, 0, 0, 0.5);
+}
+

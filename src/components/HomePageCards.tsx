@@ -20,7 +20,7 @@ export const HomePageCards: React.FC = () => {
   const Cards: cardType[] = [
     {
       title: "About Me",
-      description: "Learn more about Johnathan!",
+      description: "Learn more about Johnathan",
       imgUrl: headshot,
       link: "#about", 
     },

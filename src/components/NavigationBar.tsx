@@ -46,11 +46,10 @@ export const NavBar: React.FC = () => {
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/johnathan-tam/"><img src={navIcon1} alt="" /></a>
               <a href="https://github.com/tamjohn"><img src={navIcon2} alt="" /></a>
-              <a href="#"><img src={navIcon3} alt="" /></a>
             </div>
-            <HashLink to='#connect' className="me-4">
+            <a href="mailto:tamjohnathan@gmail.com" className="me-4">
               <button className="vvd"><span>Let’s Connect</span></button>
-            </HashLink>
+            </a>
           </span>
         </Container>
       </Navbar>

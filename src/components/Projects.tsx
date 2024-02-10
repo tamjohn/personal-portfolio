@@ -24,7 +24,7 @@ export const Projects: React.FC = () => {
         title: "Event Scheduler",
         date: "Jul - Sep 2023",
         description: "The Multi-Court Booking System is a web application that will allow residents to create their own accounts, view all bookings for the multi-court facility, make a booking on available dates on a shared calendar, and update their bookings.",
-        techStack: ["JavaScript", "React", "Node", "SQL"],
+        techStack: ["React", "Node", "Express", "PostgreSQL"],
         repoLink: "https://github.com/tamjohn/event-scheduler"
     }, 
     {

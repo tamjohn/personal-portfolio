@@ -82,7 +82,7 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
-nav.navbar a.navbar-brand {
+nav.navbar a.navbar-brand { 
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -217,6 +217,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+
+
 
 /************ Banner Css ************/
 .banner {
@@ -769,4 +771,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .backToTopButton:hover {
   background-color: #333; 
+}
+
+@media (max-width: 991px) {
+  nav.navbar .navbar-brand {
+    /* Adjust the width or margin as needed */
+    margin-right: auto; /* Pushes the brand to the left */
+  }
+
+  nav.navbar .navbar-toggler {
+    /* Adjust the margin or positioning as needed */
+    margin-left: auto; /* Pushes the toggler to the right */
+  }
+
+  /* Adjust navbar links padding or visibility if necessary */
+  nav.navbar .navbar-nav .nav-link {
+    padding: 0 1rem; /* Reduced padding for smaller screens */
+  }
+
+  /* Hide or reposition social icons and 'Let's Connect' button as needed */
+  .social-icon,
+  .navbar-text {
+    display: none; /* Hide on smaller screens or use 'd-lg-flex' class to hide below large screen sizes */
+  }
+  
+  /* Ensure the collapsed menu items align correctly */
+  nav.navbar .navbar-collapse {
+    text-align: left; /* Aligns the collapsed menu items to the left */
+  }
 }

@@ -775,28 +775,60 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media (max-width: 991px) {
   nav.navbar .navbar-brand {
-    /* Adjust the width or margin as needed */
-    margin-right: auto; /* Pushes the brand to the left */
+    margin-right: auto; 
   }
 
   nav.navbar .navbar-toggler {
-    /* Adjust the margin or positioning as needed */
-    margin-left: auto; /* Pushes the toggler to the right */
+    margin-left: auto; 
   }
 
-  /* Adjust navbar links padding or visibility if necessary */
   nav.navbar .navbar-nav .nav-link {
-    padding: 0 1rem; /* Reduced padding for smaller screens */
+    padding: 0 1rem; 
   }
 
-  /* Hide or reposition social icons and 'Let's Connect' button as needed */
   .social-icon,
   .navbar-text {
-    display: none; /* Hide on smaller screens or use 'd-lg-flex' class to hide below large screen sizes */
+    display: none;
   }
   
-  /* Ensure the collapsed menu items align correctly */
   nav.navbar .navbar-collapse {
-    text-align: left; /* Aligns the collapsed menu items to the left */
+    text-align: left; 
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutMeContainer,
+  .workExpPage,
+  .projectContainer { 
+    padding: 20px; 
+    height: auto; 
+  }
+
+  .aboutMeContent,
+  .workContent,
+  .projectContent { 
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .aboutMeImage img,
+  .workImage img,
+  .projectImage img { 
+    width: 100%; 
+    height: auto; 
+  }
+
+  .text,
+  .workText,
+  .projectText { 
+    width: 100%; 
+    text-align: center; 
+    padding: 0 15px; 
   }
 }

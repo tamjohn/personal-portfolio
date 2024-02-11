@@ -455,6 +455,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0;
   padding-top: 0;
   padding-left: 5px;
+  text-align: center;
 }
 
 .text p {
@@ -473,23 +474,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 768px) {
   .aboutMeContent {
     flex-direction: column;
-    width: 90%; 
+    align-items: center; 
+    width: 100%; 
   }
 
   .aboutMeImage, .text {
     width: 100%; 
-    height: 100%;
     margin: 0 auto; 
     flex: none; 
+  }
+
+  .text {
+    padding: 0; 
+    align-items: center; 
   }
 
   .text h1 {
     font-size: 2em; 
     margin-top: 0;
-    padding-top: 0; 
+    text-align: center; 
   }
 
-  .text p {
+  .text p, .text p span {
     text-align: center; 
   }
 }
@@ -615,7 +621,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: black; 
   text-align: center; 
   margin-bottom: 1rem; 
-  font-size: 3rem; 
+  font-size: 2rem; 
 }
 
 .resumeLink {
@@ -627,7 +633,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .workExpHeader h2 {
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 
 .workCard .skillsText {

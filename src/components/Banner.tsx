@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 function TrackVisibility(props: { children: (isVisible: boolean) => React.ReactNode }) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleVisibilityChange = (visible: boolean) => {
-      setIsVisible(visible);
-    };
-
-    return () => {
-    };
-  }, []);
+  const [isVisible] = useState(false);
 
   return <>{props.children(isVisible)}</>;
 }
@@ -21,35 +12,31 @@ const Banner: React.FC = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState<string>('');
   const typingSpeed = 150; 
-  const deletionSpeed = 100; 
-  const [index, setIndex] = useState<number>(1);
-  const toRotate: string[] = [ "Hello! I'm Johnathan.", "I am a Software Developer."];
-  const period: number = 2000;
+  const deletionSpeed = 100;
+  const period = 2000;
+  
+  const toRotate = useMemo(() => ["Hello! I'm Johnathan.", "I am a Software Developer."], []);
 
   useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, isDeleting ? deletionSpeed : typingSpeed);
+    const tick = () => {
+      let i = loopNum % toRotate.length;
+      let fullText = toRotate[i];
+      let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
-    return () => { clearInterval(ticker) };
-  }, [text, isDeleting]);
+      setText(updatedText);
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+      if (!isDeleting && updatedText === fullText) {
+        setTimeout(() => setIsDeleting(true), period);
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
 
-    setText(updatedText);
+    let ticker = setInterval(tick, isDeleting ? deletionSpeed : typingSpeed);
 
-    if (!isDeleting && updatedText === fullText) {
-      setTimeout(() => {
-        setIsDeleting(true);
-      }, period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-    }
-  }
+    return () => { clearInterval(ticker); };
+  }, [text, isDeleting, loopNum, toRotate]);
 
   return (
     <section className="banner" id="home">

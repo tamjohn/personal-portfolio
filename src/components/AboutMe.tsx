@@ -13,7 +13,7 @@ export const AboutMePage: React.FC = () => {
     <div className="aboutMeContainer" id='about'>
       <div className="aboutMeContent">
         <div className="aboutMeImage">
-          <img src={casualPhoto} alt="Image" />
+          <img src={casualPhoto} alt="Johnathan Tam casual portrait" />
         </div>
         <div className="text">
           <h1>About Me</h1>

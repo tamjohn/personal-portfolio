@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, Tab } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import diligentLogo from '../assets/img/Diligent_Logo.jpg';
 import deltaLogo from '../assets/img/DeltaControls_Logo.png';

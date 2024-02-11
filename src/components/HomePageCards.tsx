@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import React from 'react';
+import { Container, Row, Col, Tab } from "react-bootstrap";
 import { Card } from "./Card";
 import headshot from "../assets/img/Johnathan_Headshot.jpg";
 import resume from "../assets/img/Resume.png";
 import projectPic from "../assets/img/Project.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 type cardType = {
@@ -37,11 +36,6 @@ export const HomePageCards: React.FC = () => {
       link: "#projects", 
     },
   ];
-  const [bounce, setBounce] = useState(false);
-
-  const handleAnimationEnd = () => {
-    setBounce(true);
-  };
 
   return (
     <section className="cards" id='home'>
@@ -49,7 +43,7 @@ export const HomePageCards: React.FC = () => {
         <Row>
           <TrackVisibility>
             {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""} onAnimationEnd={handleAnimationEnd}>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <Tab.Container id="project-tabs" defaultActiveKey="first">
                   <Tab.Content id="slideInUp"  className={isVisible ? "continuousBounce" : ""}>
                     <Tab.Pane eventKey="first">

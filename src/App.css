@@ -792,7 +792,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   
   nav.navbar .navbar-collapse {
-    text-align: left; 
+    text-align: right; 
   }
 }
 

@@ -21,11 +21,11 @@ export const Projects: React.FC = () => {
         repoLink: "https://github.com/tamjohn/Hearo"
     }, 
     {
-        title: "Event Scheduler",
+        title: "Strata Portal",
         date: "Jul - Sep 2023",
-        description: "The Multi-Court Booking System is a web application that will allow residents to create their own accounts, view all bookings for the multi-court facility, make a booking on available dates on a shared calendar, and update their bookings.",
-        techStack: ["React", "Node", "Express", "PostgreSQL"],
-        repoLink: "https://github.com/tamjohn/event-scheduler"
+        description: "The Strata Portal is a full-stack web application, with secure login functionality, that enables residents to schedule bookings for a shared amenities facility, view strata announcements, and submit requests to the building manager.",
+        techStack: ["React", "TypeScript", "Express", "SQL"],
+        repoLink: "https://github.com/tamjohn/strata-booking-system"
     }, 
     {
         title: "CRUD API",

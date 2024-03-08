@@ -61,7 +61,7 @@ export const WorkExp: React.FC = () => {
       </Row>
       <Row>
         <Col className="resumeLink">
-          <a href={`${process.env.PUBLIC_URL}/Johnathan_Resume_2024.pdf`} target="_blank" rel="noopener noreferrer" className="resumeButton">
+          <a href={`${process.env.PUBLIC_URL}/Johnathan_Resume.pdf`} target="_blank" rel="noopener noreferrer" className="resumeButton">
             View My Resume
           </a>
         </Col>

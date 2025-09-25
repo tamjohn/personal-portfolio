@@ -5,6 +5,7 @@ import diligentLogo from '../assets/img/Diligent_Logo.jpg';
 import deltaLogo from '../assets/img/DeltaControls_Logo.png';
 import convergenceLogo from '../assets/img/Convergence_logo.jpg';
 import arcLogo from '../assets/img/ARC_logo.png';
+import GMOLogo from '../assets/img/GMO_Financial_Holdings.png';
 
 type cardType = {
     companyName: string;
@@ -17,6 +18,14 @@ type cardType = {
 
 export const WorkExp: React.FC = () => {
   const Cards: cardType[] = [
+    {
+      companyName: "GMO Financial Holdings Inc",
+      role: "Software Engineer",
+      datesWorked: "June 2024 - Sep 2025",
+      techStack: ["Kotlin", "Java", "Swift", "TypeScript", "Docker", "Spring", "React"],
+      logoUrl: GMOLogo,
+      link: "https://www.gmofh.com/en/",
+  },
     {
       companyName: "Diligent Corporation",
       role: "Software Engineer Intern",
@@ -40,15 +49,7 @@ export const WorkExp: React.FC = () => {
         techStack: ["React", "TypeScript", "Node.js", "GraphQL", "PostgreSQL", "Apollo", "MongoDB"],
         logoUrl: convergenceLogo,
         link: "https://cctech.io/",
-    },
-    {
-        companyName: "Arthritis Research Canada",
-        role: "Research Coordinator",
-        datesWorked: "May 2017 - Sep 2022",
-        techStack: ["Project Management", "Communication", "Problem-Solving"],
-        logoUrl: arcLogo,
-        link: "https://www.arthritisresearch.ca/",
-    },
+    }
   ];
 
   return (
@@ -61,7 +62,7 @@ export const WorkExp: React.FC = () => {
       </Row>
       <Row>
         <Col className="resumeLink">
-          <a href={`${process.env.PUBLIC_URL}/Johnathan Tam_Resume 2024.pdf`} target="_blank" rel="noopener noreferrer" className="resumeButton">
+          <a href={`${process.env.PUBLIC_URL}/Johnathan Tam_Resume_2025.pdf`} target="_blank" rel="noopener noreferrer" className="resumeButton">
             View My Resume
           </a>
         </Col>

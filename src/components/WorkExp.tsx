@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import diligentLogo from '../assets/img/Diligent_Logo.jpg';
 import deltaLogo from '../assets/img/DeltaControls_Logo.png';
 import convergenceLogo from '../assets/img/Convergence_logo.jpg';
-import arcLogo from '../assets/img/ARC_logo.png';
 import GMOLogo from '../assets/img/GMO_Financial_Holdings.png';
 
 type cardType = {
